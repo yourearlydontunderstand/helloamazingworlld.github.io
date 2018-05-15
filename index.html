@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+  h1 {
+    color: #7fff00 ;
+
+  }
+
+  p {
+    color: #7fff00 ;
+  }
+    body {
+      background-color: black;
+      color: #7fff00 ;
+      font-size: 22px;
+
+      box-sizing: border-box;
+      margin: 0;
+      padding: px;
+      display: flex;
+      flex-direction: column;
+      max-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .members-count,
+    .members-list,
+    .messages {
+      border: 1px solid #e4e4e4;
+      padding: 15px;
+      margin-bottom: 15px;
+      background-color: black;
+
+
+    }
+
+    .messages {
+      flex-shrink: 1;
+      overflow: auto;
+            background-color: black;
+
+    }
+
+    .message {
+      padding: 5px 0;
+            background-color: black;
+
+    }
+    .message .member {
+      display: inline-block;
+    }
+
+    .member {
+      padding-right: 10px;
+      position: relative;
+    }
+
+    .message-form {
+      display: flex;
+      flex-shrink: 0;
+    }
+    .message-form__input {
+      color: #7fff00 ;
+      flex-grow: 1;
+      border: 1px solid #dfdfdf;
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: black;
+
+    }
+    .message-form__button {
+      margin: 20px;
+    }
+    input[type=submit] {
+    padding:25px 45px; 
+    background: black; 
+    color: #7fff00 ;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+          border: 1px solid #e4e4e4;
+
+}
+input[type=submit]:focus {
+    border-color:#333;
+}
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Retro Chat </h1>
+  <div class="members-count">Loading...</div>
+  <div class="members-list">Loading...</div>
+  <div class="messages">[Console] ---Welcome to the Chat!---<br>RULES:<br>-No Racism<br>-No Swearing<br>-No NSFW content<br>-No harrasment<br><br></div>
+  <form class="message-form" onsubmit="return false;">
+    <input class="message-form__input" placeholder="Type a message.." type="text"/>
+    <input class="message-form__button" value="Send" type="submit"/>
+  </form>
+  <script src="./script.js"></script>
+</body>
+</html>
